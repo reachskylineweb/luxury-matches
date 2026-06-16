@@ -1808,6 +1808,34 @@ header {
     transform: translateY(40px);
 }
 
+/* Testimonials Slider/Marquee Styles */
+.testimonials-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0 3rem;
+}
+
+.testimonials-grid.marquee-track {
+    display: flex;
+    grid-template-columns: none !important; /* Disable grid layout */
+    width: max-content;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.testimonials-grid.marquee-track .testimonial-card {
+    width: 420px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid.marquee-track .testimonial-card {
+        width: 310px;
+        padding: 2.5rem 2rem 2rem;
+    }
+}
+
 /* -------------------------------------------------------------
    RESPONSIVENESS (MEDIA QUERIES)
 ------------------------------------------------------------- */
@@ -1901,13 +1929,27 @@ header {
         padding-right: 0;
     }
     
-    .timeline-item.left {
-        text-align: left;
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0 !important;
+        text-align: left !important;
     }
     
     .timeline-item.left .timeline-dot,
     .timeline-item.right .timeline-dot {
         left: 2rem;
+    }
+    
+    /* Thicken paragraph and subtitle text on mobile and tablet for readability */
+    p, .timeline-text, .craft-desc, .why-card-desc, .testimonial-text, .detail-val, .detail-link {
+        font-weight: 500 !important;
+        color: var(--text-dark) !important;
+    }
+    
+    .hero-subtitle {
+        font-weight: 500 !important;
+        color: var(--text-light) !important;
+        text-shadow: 0 1px 8px rgba(250, 246, 235, 0.95), 0 2px 15px rgba(250, 246, 235, 0.8) !important;
     }
     
     .contact-grid {

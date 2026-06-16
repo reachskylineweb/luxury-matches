@@ -91,6 +91,7 @@ function transitionToHomepage() {
             initMap();
             initContactForm();
             initMobileMenu();
+            initTestimonialsMarquee();
         }
     });
 
@@ -451,41 +452,51 @@ function initMap() {
     function deactivateAllNodes() {
         markers.forEach(m => {
             m.classList.remove('active-node');
-            const city = m.getAttribute('data-city') || "";
-            const routeId = `route-${city.toLowerCase().replace(' ', '')}`;
-            const line = document.getElementById(routeId);
-            if (line) {
-                line.style.opacity = '';
-                line.style.strokeWidth = '';
-                line.style.stroke = '';
-            }
+        });
+        document.querySelectorAll('.map-connection-line').forEach(line => {
+            line.style.opacity = '';
+            line.style.strokeWidth = '';
+            line.style.stroke = '';
         });
         mapContainer.classList.remove('map-active-state');
         tooltip.style.opacity = '0';
     }
 
+    function activateNode(marker) {
+        const city = marker.getAttribute('data-city') || "HQ - Manufacturing";
+        const info = marker.getAttribute('data-info') || "Precision match formulation, global logistics hub.";
+        
+        tooltip.querySelector('.tooltip-city').textContent = city;
+        tooltip.querySelector('.tooltip-info').textContent = info;
+        
+        // Highlighting connection lines:
+        if (city.toLowerCase().includes('factory') || city.toLowerCase().includes('hq')) {
+            // Highlight all export connection lines emanating from HQ
+            document.querySelectorAll('.map-connection-line').forEach(line => {
+                line.style.opacity = '0.85';
+                line.style.strokeWidth = '1.8';
+                line.style.stroke = '#AB8A2C';
+            });
+        } else {
+            const routeId = `route-${city.toLowerCase().replace(' ', '')}`;
+            const line = document.getElementById(routeId);
+            if (line) {
+                line.style.opacity = '0.85';
+                line.style.strokeWidth = '2';
+                line.style.stroke = '#AB8A2C';
+            }
+        }
+        
+        marker.classList.add('active-node');
+        mapContainer.classList.add('map-active-state');
+        tooltip.style.opacity = '1';
+    }
+
     markers.forEach(marker => {
         // Handle Hover (Desktop)
         marker.addEventListener('mouseenter', (e) => {
-            // Only use hover on devices that have a hover-capable mouse
             if (window.matchMedia('(hover: hover)').matches) {
-                const city = marker.getAttribute('data-city') || "HQ - Manufacturing";
-                const info = marker.getAttribute('data-info') || "Precision match formulation, global logistics hub.";
-                
-                tooltip.querySelector('.tooltip-city').textContent = city;
-                tooltip.querySelector('.tooltip-info').textContent = info;
-                
-                const routeId = `route-${city.toLowerCase().replace(' ', '')}`;
-                const line = document.getElementById(routeId);
-                if (line) {
-                    line.style.opacity = '0.85';
-                    line.style.strokeWidth = '2';
-                    line.style.stroke = '#AB8A2C';
-                }
-                
-                marker.classList.add('active-node');
-                mapContainer.classList.add('map-active-state');
-                tooltip.style.opacity = '1';
+                activateNode(marker);
                 tooltip.style.transform = ''; // reset center transform
             }
         });
@@ -517,25 +528,7 @@ function initMap() {
             deactivateAllNodes();
             
             if (!isAlreadyActive) {
-                const city = marker.getAttribute('data-city') || "HQ - Manufacturing";
-                const info = marker.getAttribute('data-info') || "Precision match formulation, global logistics hub.";
-                
-                tooltip.querySelector('.tooltip-city').textContent = city;
-                tooltip.querySelector('.tooltip-info').textContent = info;
-                
-                const routeId = `route-${city.toLowerCase().replace(' ', '')}`;
-                const line = document.getElementById(routeId);
-                if (line) {
-                    line.style.opacity = '0.85';
-                    line.style.strokeWidth = '2';
-                    line.style.stroke = '#AB8A2C';
-                }
-                
-                marker.classList.add('active-node');
-                mapContainer.classList.add('map-active-state');
-                
-                // Show tooltip
-                tooltip.style.opacity = '1';
+                activateNode(marker);
                 // Position above the node
                 positionTooltipAtMarker(marker);
             }
@@ -546,6 +539,18 @@ function initMap() {
     document.addEventListener('click', () => {
         deactivateAllNodes();
     });
+
+    // Highlight Srivilliputhur HQ Node by default on mobile/tablet screens initially
+    if (window.innerWidth < 768) {
+        const hqNode = document.querySelector('.map-marker.hq');
+        if (hqNode) {
+            setTimeout(() => {
+                deactivateAllNodes();
+                activateNode(hqNode);
+                positionTooltipAtMarker(hqNode);
+            }, 1200);
+        }
+    }
 }
 
 /* -------------------------------------------------------------
@@ -729,4 +734,76 @@ function initMobileMenu() {
             if (lenis) lenis.start();
         });
     });
+}
+
+/* -------------------------------------------------------------
+   10. TESTIMONIALS AUTO-SCROLLER (MARQUEE WITH HOVER PAUSE)
+------------------------------------------------------------- */
+function initTestimonialsMarquee() {
+    const grid = document.querySelector('.testimonials-grid');
+    if (!grid) return;
+
+    const cards = Array.from(grid.children);
+    if (cards.length === 0) return;
+
+    // Remove scroll-reveal-item from individual cards to prevent GSAP overrides
+    cards.forEach(card => card.classList.remove('scroll-reveal-item'));
+
+    // Wrap in a marquee container
+    const parent = grid.parentElement;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'testimonials-marquee-wrapper scroll-reveal-item';
+    parent.replaceChild(wrapper, grid);
+    wrapper.appendChild(grid);
+
+    // Clone cards to enable seamless loop
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        grid.appendChild(clone);
+    });
+
+    grid.classList.add('marquee-track');
+
+    let scrollWidth = 0;
+
+    function calculateScrollWidth() {
+        const gap = parseFloat(getComputedStyle(grid).gap || 40);
+        let totalWidth = 0;
+        for (let i = 0; i < cards.length; i++) {
+            totalWidth += cards[i].offsetWidth;
+        }
+        scrollWidth = totalWidth + (cards.length * gap);
+    }
+
+    setTimeout(() => {
+        calculateScrollWidth();
+        
+        // GSAP seamless loop timeline
+        const marqueeTween = gsap.to(grid, {
+            x: -scrollWidth,
+            duration: 25,
+            ease: "none",
+            repeat: -1
+        });
+
+        // Hover events (Desktop)
+        wrapper.addEventListener('mouseenter', () => marqueeTween.pause());
+        wrapper.addEventListener('mouseleave', () => marqueeTween.play());
+
+        // Touch events (Mobile/Tablet)
+        wrapper.addEventListener('touchstart', () => marqueeTween.pause(), { passive: true });
+        wrapper.addEventListener('touchend', () => {
+            setTimeout(() => marqueeTween.play(), 800);
+        }, { passive: true });
+
+        // Resize support
+        window.addEventListener('resize', () => {
+            marqueeTween.pause();
+            calculateScrollWidth();
+            marqueeTween.vars.x = -scrollWidth;
+            marqueeTween.invalidate();
+            marqueeTween.restart();
+            marqueeTween.play();
+        });
+    }, 150);
 }
