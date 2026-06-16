@@ -740,6 +740,9 @@ function initMobileMenu() {
    10. TESTIMONIALS AUTO-SCROLLER (MARQUEE WITH HOVER PAUSE)
 ------------------------------------------------------------- */
 function initTestimonialsMarquee() {
+    // Skip testimonials marquee on mobile viewports since the section is hidden
+    if (window.innerWidth <= 768) return;
+
     const grid = document.querySelector('.testimonials-grid');
     if (!grid) return;
 
