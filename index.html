@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell Matches | Igniting Traditions. Crafting Excellence.</title>
+    <meta name="description" content="Discover the timeless artistry, heritage, and elite craftsmanship of Bell Matches. We craft more than sparks; we curate a legacy of fire, elegance, and premium luxury.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bell Matches | Igniting Traditions. Crafting Excellence.">
+    <meta property="og:description" content="Discover the timeless artistry, heritage, and elite craftsmanship of Bell Matches. We craft more than sparks; we curate a legacy of fire, elegance, and premium luxury.">
+    <meta property="og:image" content="assets/images/gold_edition.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cinematic Preloader -->
+    <div id="preloader" class="preloader-container">
+        <canvas id="preloader-canvas"></canvas>
+        <div class="preloader-overlay">
+            <div class="preloader-content">
+                <div class="brand-logo-container">
+                    <span class="brand-subtitle">HERITAGE & FIRE</span>
+                    <h1 class="brand-title">BELL MATCHES</h1>
+                </div>
+                <div class="loader-progress-wrap">
+                    <div class="loader-progress-bar">
+                        <div class="loader-progress-fill" id="loader-fill"></div>
+                        <div class="loader-progress-spark" id="loader-spark"></div>
+                    </div>
+                    <div class="loader-percentage" id="loader-percentage">00%</div>
+                </div>
+                <p class="loader-status">Crafting Excellence...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smooth Scroll Wrapper (Lenis) -->
+    <div id="scroll-wrapper">
+        
+        <!-- Header / Navigation -->
+        <header id="main-header" class="header-glass">
+            <div class="header-container">
+                <a href="#" class="nav-logo">
+                    <span class="gold-logo-icon">♦</span> BELL MATCHES
+                </a>
+                <nav class="nav-menu">
+                    <a href="#heritage" class="nav-link">Heritage</a>
+                    <a href="#craftsmanship" class="nav-link">Craftsmanship</a>
+                    <a href="#collection" class="nav-link">Collection</a>
+                    <a href="#why-us" class="nav-link">Excellence</a>
+                    <a href="#contact" class="nav-link">Inquiry</a>
+                </nav>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-nav">
+                        <span class="btn-text">Connect</span>
+                        <span class="btn-hover-bg"></span>
+                    </a>
+                </div>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu-container">
+            <div class="mobile-menu-inner">
+                <nav class="mobile-nav-links">
+                    <a href="#heritage" class="mobile-link">Heritage</a>
+                    <a href="#craftsmanship" class="mobile-link">Craftsmanship</a>
+                    <a href="#collection" class="mobile-link">Collection</a>
+                    <a href="#why-us" class="mobile-link">Excellence</a>
+                    <a href="#contact" class="mobile-link">Inquiry</a>
+                </nav>
+                <div class="mobile-menu-footer">
+                    <p>IGNITING TRADITIONS. CRAFTING EXCELLENCE.</p>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <!-- 3D Canvas for floating matchbox -->
+                <div id="hero-3d-container">
+                    <canvas id="hero-canvas"></canvas>
+                </div>
+                
+                <!-- Hero Content Overlay -->
+                <div class="hero-content-wrapper">
+                    <div class="hero-grid container">
+                        <div class="hero-text-block">
+                            <span class="hero-tagline scroll-reveal">Est. 1976 | The Art of Fire</span>
+                            <h2 class="hero-title scroll-reveal">
+                                <span class="reveal-line">Luxury In</span>
+                                <span class="reveal-line text-gold">Every Strike</span>
+                            </h2>
+                            <p class="hero-subtitle scroll-reveal">
+                                For generations, Bell Matches has transformed a simple spark into a symbol of craftsmanship, elegance, and timeless quality.
+                            </p>
+                            <div class="hero-actions scroll-reveal">
+                                <a href="#collection" class="btn btn-primary btn-magnetic">
+                                    <span class="btn-text">Discover The Collection</span>
+                                </a>
+                                <a href="#heritage" class="btn btn-outline btn-magnetic">
+                                    <span class="btn-text">Explore Heritage</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ambient Bottom Shadow Overlay -->
+                <div class="hero-bottom-glow"></div>
+                <div class="scroll-indicator">
+                    <span class="indicator-mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="indicator-text">Scroll to Begin</span>
+                </div>
+            </section>
+
+            <!-- Section: Heritage -->
+            <section id="heritage" class="heritage-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="gold-subtitle">Our Heritage</span>
+                        <h2 class="section-title">A Legacy That Burns Bright</h2>
+                        <div class="gold-divider"></div>
+                        <p class="section-description">
+                            For decades, Bell Matches has stood as a symbol of quality, reliability, and craftsmanship. Every matchbox reflects generations of expertise, precision manufacturing, and an unwavering commitment to excellence.
+                        </p>
+                    </div>
+
+                    <!-- Luxury Timeline -->
+                    <div class="timeline-container">
+                        <div class="timeline-line">
+                            <div class="timeline-progress"></div>
+                        </div>
+                        
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item left scroll-reveal-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-year">1976</div>
+                                <h3 class="timeline-title">The Spark of Genesis</h3>
+                                <p class="timeline-text">Bell Matches was founded with a singular vision: to craft the finest matches using premium quality woods and flawless chemical formulations, transforming a utility into an elegant standard.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item right scroll-reveal-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-year">1992</div>
+                                <h3 class="timeline-title">Precision Evolution</h3>
+                                <p class="timeline-text">Integrating advanced European wood cutting and processing technology. We set a benchmark for safety, long burn-times, and beautiful strike consistency, gaining the trust of luxury hotels globally.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item left scroll-reveal-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-year">2008</div>
+                                <h3 class="timeline-title">The Golden Era</h3>
+                                <p class="timeline-text">Unveiling our signature series, blending premium gold foil packaging with ultra-premium wood selection, defining what it means to experience luxury in every strike.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item right scroll-reveal-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-year">2026</div>
+                                <h3 class="timeline-title">Sustainable Mastery</h3>
+                                <p class="timeline-text">Pioneering fully carbon-neutral sourcing and eco-friendly chemical compositions while maintaining the same robust performance, elegance, and premium tactile feel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Craftsmanship -->
+            <section id="craftsmanship" class="craftsmanship-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="gold-subtitle">The Process</span>
+                        <h2 class="section-title">The Art Of Craftsmanship</h2>
+                        <div class="gold-divider"></div>
+                        <p class="section-description">
+                            Every Bell Match is a masterpiece of precision engineering and heritage skill. We treat fire not as a reaction, but as an art form.
+                        </p>
+                    </div>
+
+                    <!-- Storytelling Cards Grid -->
+                    <div class="craftsmanship-grid">
+                        
+                        <!-- Card 1 -->
+                        <div class="craft-card scroll-reveal-item">
+                            <div class="craft-card-inner">
+                                <div class="craft-number">
+                                    <svg class="match-digit" viewBox="0 0 40 50">
+                                        <line class="match-shaft" x1="20" y1="8" x2="20" y2="42" />
+                                        <circle class="match-head" cx="20" cy="8" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="craft-glow"></div>
+                                <h3 class="craft-title">Premium Wood Selection</h3>
+                                <p class="craft-desc">Sourced from sustainably managed, premium Aspen and Poplar forests. We handpick wood based on straight grain structure, flexibility, and natural burn rates.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="craft-card scroll-reveal-item">
+                            <div class="craft-card-inner">
+                                <div class="craft-number">
+                                    <svg class="match-digit" viewBox="0 0 40 50">
+                                        <line class="match-shaft" x1="10" y1="10" x2="30" y2="10" />
+                                        <circle class="match-head" cx="30" cy="10" r="3" />
+                                        <line class="match-shaft" x1="30" y1="10" x2="30" y2="25" />
+                                        <circle class="match-head" cx="30" cy="25" r="3" />
+                                        <line class="match-shaft" x1="30" y1="25" x2="10" y2="25" />
+                                        <circle class="match-head" cx="10" cy="25" r="3" />
+                                        <line class="match-shaft" x1="10" y1="25" x2="10" y2="40" />
+                                        <circle class="match-head" cx="10" cy="40" r="3" />
+                                        <line class="match-shaft" x1="10" y1="40" x2="30" y2="40" />
+                                        <circle class="match-head" cx="30" cy="40" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="craft-glow"></div>
+                                <h3 class="craft-title">Precision Crafting</h3>
+                                <p class="craft-desc">Each splint is cut to micrometer precision, polished to a satin touch, and treated with conditioning agents to prevent splitting and ensure a clean, smooth hold.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="craft-card scroll-reveal-item">
+                            <div class="craft-card-inner">
+                                <div class="craft-number">
+                                    <svg class="match-digit" viewBox="0 0 40 50">
+                                        <line class="match-shaft" x1="10" y1="10" x2="30" y2="10" />
+                                        <circle class="match-head" cx="30" cy="10" r="3" />
+                                        <line class="match-shaft" x1="30" y1="10" x2="30" y2="25" />
+                                        <circle class="match-head" cx="30" cy="25" r="3" />
+                                        <line class="match-shaft" x1="30" y1="25" x2="15" y2="25" />
+                                        <circle class="match-head" cx="15" cy="25" r="3" />
+                                        <line class="match-shaft" x1="30" y1="25" x2="30" y2="40" />
+                                        <circle class="match-head" cx="30" cy="40" r="3" />
+                                        <line class="match-shaft" x1="30" y1="40" x2="10" y2="40" />
+                                        <circle class="match-head" cx="10" cy="40" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="craft-glow"></div>
+                                <h3 class="craft-title">Safety Engineering</h3>
+                                <p class="craft-desc">Infused with a signature chemical recipe that burns cleanly without hazardous sulfur odors, designed to self-extinguish safely when the flame reaches the hilt.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="craft-card scroll-reveal-item">
+                            <div class="craft-card-inner">
+                                <div class="craft-number">
+                                    <svg class="match-digit" viewBox="0 0 40 50">
+                                        <line class="match-shaft" x1="10" y1="10" x2="10" y2="25" />
+                                        <circle class="match-head" cx="10" cy="25" r="3" />
+                                        <line class="match-shaft" x1="10" y1="25" x2="30" y2="25" />
+                                        <circle class="match-head" cx="30" cy="25" r="3" />
+                                        <line class="match-shaft" x1="32" y1="8" x2="32" y2="42" />
+                                        <circle class="match-head" cx="32" cy="8" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="craft-glow"></div>
+                                <h3 class="craft-title">Quality Inspection</h3>
+                                <p class="craft-desc">A rigorous five-stage quality checkpoint system combining laser scanning and master artisan inspection to verify box friction surfaces and match tip thickness.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="craft-card scroll-reveal-item">
+                            <div class="craft-card-inner">
+                                <div class="craft-number">
+                                    <svg class="match-digit" viewBox="0 0 40 50">
+                                        <line class="match-shaft" x1="30" y1="10" x2="10" y2="10" />
+                                        <circle class="match-head" cx="10" cy="10" r="3" />
+                                        <line class="match-shaft" x1="10" y1="10" x2="10" y2="25" />
+                                        <circle class="match-head" cx="10" cy="25" r="3" />
+                                        <line class="match-shaft" x1="10" y1="25" x2="30" y2="25" />
+                                        <circle class="match-head" cx="30" cy="25" r="3" />
+                                        <line class="match-shaft" x1="30" y1="25" x2="30" y2="40" />
+                                        <circle class="match-head" cx="30" cy="40" r="3" />
+                                        <line class="match-shaft" x1="30" y1="40" x2="10" y2="40" />
+                                        <circle class="match-head" cx="10" cy="40" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="craft-glow"></div>
+                                <h3 class="craft-title">Luxury Packaging</h3>
+                                <p class="craft-desc">Wrapped in high-grammage cardboards, detailed with premium gold-leaf embossments, tactile side striker surfaces, and a velvet-smooth tray slide.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="craft-card scroll-reveal-item">
+                            <div class="craft-card-inner">
+                                <div class="craft-number">
+                                    <svg class="match-digit" viewBox="0 0 40 50">
+                                        <line class="match-shaft" x1="30" y1="10" x2="10" y2="10" />
+                                        <circle class="match-head" cx="10" cy="10" r="3" />
+                                        <line class="match-shaft" x1="10" y1="10" x2="10" y2="40" />
+                                        <circle class="match-head" cx="10" cy="40" r="3" />
+                                        <line class="match-shaft" x1="10" y1="25" x2="30" y2="25" />
+                                        <circle class="match-head" cx="30" cy="25" r="3" />
+                                        <line class="match-shaft" x1="30" y1="25" x2="30" y2="40" />
+                                        <circle class="match-head" cx="30" cy="40" r="3" />
+                                        <line class="match-shaft" x1="30" y1="40" x2="10" y2="40" />
+                                        <circle class="match-head" cx="10" cy="40" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="craft-glow"></div>
+                                <h3 class="craft-title">Global Distribution</h3>
+                                <p class="craft-desc">Dispatched in secure climate-controlled vaults to direct distribution hubs globally, safeguarding each strike surface's premium dry friction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Signature Collection -->
+            <section id="collection" class="collection-section section-padding">
+                <div class="container-fluid">
+                    <div class="section-header text-center">
+                        <span class="gold-subtitle">Our Masterpieces</span>
+                        <h2 class="section-title">The Signature Collection</h2>
+                        <div class="gold-divider"></div>
+                        <p class="section-description container">
+                            Curated for the connoisseurs of fine living. From classic editions to bespoke collector boxes, explore a legacy wrapped in gold and flame.
+                        </p>
+                    </div>
+
+                    <!-- Apple-style 3D Carousel -->
+                    <div class="carousel-outer-container">
+                        <div class="carousel-track-container" id="carousel-track">
+                            
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide active" data-index="0">
+                                <div class="slide-image-wrapper">
+                                    <img src="assets/images/classic_box.png" alt="Classic Bell Matches" class="carousel-img">
+                                    <div class="slide-reflection">
+                                        <img src="assets/images/classic_box.png" alt="" class="carousel-img-reflection">
+                                    </div>
+                                </div>
+                                <div class="slide-info">
+                                    <h3 class="slide-product-title">Classic Bell Matches</h3>
+                                    <p class="slide-product-meta">45 Splints | Premium Poplar | Strike-on-Box</p>
+                                    <p class="slide-product-desc">The cornerstone of our heritage. An everyday essential elevated through high-density striker chemicals and select polished matchsticks.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide" data-index="1">
+                                <div class="slide-image-wrapper">
+                                    <img src="assets/images/gold_edition.png" alt="Premium Gold Edition" class="carousel-img">
+                                    <div class="slide-reflection">
+                                        <img src="assets/images/gold_edition.png" alt="" class="carousel-img-reflection">
+                                    </div>
+                                </div>
+                                <div class="slide-info">
+                                    <h3 class="slide-product-title">Premium Gold Edition</h3>
+                                    <p class="slide-product-meta">50 Splints | Burnished Gold Heads | Embossed Sleeve</p>
+                                    <p class="slide-product-desc">Infused with real gold foil lettering and matching golden tips. An exquisite statement of prestige designed for high-end lounges and cigar parlors.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide" data-index="2">
+                                <div class="slide-image-wrapper">
+                                    <img src="assets/images/collectors_box.png" alt="Collector's Edition" class="carousel-img">
+                                    <div class="slide-reflection">
+                                        <img src="assets/images/collectors_box.png" alt="" class="carousel-img-reflection">
+                                    </div>
+                                </div>
+                                <div class="slide-info">
+                                    <h3 class="slide-product-title">Collector's Edition</h3>
+                                    <p class="slide-product-meta">Limited Numbered Boxes | Rare Aspen | Wax-Coated Tips</p>
+                                    <p class="slide-product-desc">Hand-numbered limited production run featuring historic archival logos. Features premium wax-coated tips for zero humidity absorption and lifetime ignition.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <div class="carousel-controls">
+                            <button class="carousel-btn btn-prev" aria-label="Previous slide">
+                                <span class="arrow">←</span>
+                            </button>
+                            <div class="carousel-dots">
+                                <span class="carousel-dot active" data-index="0"></span>
+                                <span class="carousel-dot" data-index="1"></span>
+                                <span class="carousel-dot" data-index="2"></span>
+                            </div>
+                            <button class="carousel-btn btn-next" aria-label="Next slide">
+                                <span class="arrow">→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Why Bell Matches -->
+            <section id="why-us" class="why-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="gold-subtitle">Why Bell Matches</span>
+                        <h2 class="section-title">The Standards Of Prestige</h2>
+                        <div class="gold-divider"></div>
+                    </div>
+
+                    <div class="why-grid">
+                        
+                        <!-- Block 1 -->
+                        <div class="why-card scroll-reveal-item">
+                            <div class="why-icon-wrap">
+                                <span class="why-icon">🏺</span>
+                            </div>
+                            <h3 class="why-card-title">Generational Heritage</h3>
+                            <p class="why-card-desc">Decades of refined production secrets, creating a flawless ignite experience that lesser manufacturers cannot replicate.</p>
+                        </div>
+
+                        <!-- Block 2 -->
+                        <div class="why-card scroll-reveal-item">
+                            <div class="why-icon-wrap">
+                                <span class="why-icon">⚙️</span>
+                            </div>
+                            <h3 class="why-card-title">Premium Manufacturing</h3>
+                            <p class="why-card-desc">Sourcing precise mechanical machinery from Germany and Japan to deliver flawless, non-splitting matchsticks.</p>
+                        </div>
+
+                        <!-- Block 3 -->
+                        <div class="why-card scroll-reveal-item">
+                            <div class="why-icon-wrap">
+                                <span class="why-icon">🌐</span>
+                            </div>
+                            <h3 class="why-card-title">Global Distribution</h3>
+                            <p class="why-card-desc">Operating in 20+ countries with custom logistics setups that guarantee perfect condition upon arrival.</p>
+                        </div>
+
+                        <!-- Block 4 -->
+                        <div class="why-card scroll-reveal-item">
+                            <div class="why-icon-wrap">
+                                <span class="why-icon">📦</span>
+                            </div>
+                            <h3 class="why-card-title">Luxury Packaging</h3>
+                            <p class="why-card-desc">Heavyweight premium cards, custom foil debossing, and rich, tactile scratch surfaces that exude opulence.</p>
+                        </div>
+
+                        <!-- Block 5 -->
+                        <div class="why-card scroll-reveal-item">
+                            <div class="why-icon-wrap">
+                                <span class="why-icon">🛡️</span>
+                            </div>
+                            <h3 class="why-card-title">Trusted Quality</h3>
+                            <p class="why-card-desc">Rigid batch testing ensures every single matchbox meets strict ISO 2859 inspection levels.</p>
+                        </div>
+
+                        <!-- Block 6 -->
+                        <div class="why-card scroll-reveal-item">
+                            <div class="why-icon-wrap">
+                                <span class="why-icon">🌱</span>
+                            </div>
+                            <h3 class="why-card-title">Sustainable Sourcing</h3>
+                            <p class="why-card-desc">FSC-certified timber sourcing, bio-degradable components, and carbon offset programs for responsible luxury.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Statistics -->
+            <section id="statistics" class="stats-section section-padding">
+                <div class="container">
+                    <div class="stats-grid">
+                        
+                        <!-- Stat 1 -->
+                        <div class="stat-card scroll-reveal-item">
+                            <div class="stat-num-container">
+                                <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                            </div>
+                            <p class="stat-label">Years of Heritage</p>
+                        </div>
+
+                        <!-- Stat 2 -->
+                        <div class="stat-card scroll-reveal-item">
+                            <div class="stat-num-container">
+                                <span class="stat-number" data-target="500">0</span><span class="stat-suffix">M+</span>
+                            </div>
+                            <p class="stat-label">Boxes Crafted</p>
+                        </div>
+
+                        <!-- Stat 3 -->
+                        <div class="stat-card scroll-reveal-item">
+                            <div class="stat-num-container">
+                                <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
+                            </div>
+                            <p class="stat-label">Distribution Partners</p>
+                        </div>
+
+                        <!-- Stat 4 -->
+                        <div class="stat-card scroll-reveal-item">
+                            <div class="stat-num-container">
+                                <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+                            </div>
+                            <p class="stat-label">Export Markets</p>
+                        </div>
+
+                        <!-- Stat 5 -->
+                        <div class="stat-card scroll-reveal-item">
+                            <div class="stat-num-container">
+                                <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+                            </div>
+                            <p class="stat-label">Customer Trust Score</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Global Presence -->
+            <section id="global-map" class="map-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="gold-subtitle">Export Network</span>
+                        <h2 class="section-title">A Global Presence</h2>
+                        <div class="gold-divider"></div>
+                        <p class="section-description">
+                            From our heritage workshops, Bell Matches ignites luxury moments across five continents. Hover over the golden nodes to trace our international distribution lines.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Map Container -->
+                    <div class="map-container scroll-reveal-item">
+                        <svg id="world-map-svg" viewBox="0 0 1000 500" class="map-svg">
+                            <!-- Background Map Outlines -->
+                            <path class="map-land-path" d="M150,110 L160,105 L170,112 L190,108 L200,120 L210,115 L225,125 L240,118 L250,128 L270,120 L280,135 L260,150 L240,165 L220,170 L210,185 L180,180 L165,195 L150,215 L140,230 L130,250 L145,280 L160,300 L180,310 L200,325 L215,350 L230,380 L235,420 L225,430 L210,430 L200,410 L195,380 L185,360 L180,335 L175,310 L160,290 L145,265 L135,240 L125,230 L115,225 L105,210 L95,200 L85,185 L70,180 L60,170 L55,160 L60,145 L70,140 L80,145 L90,135 L110,130 L130,125 L140,120 Z" />
+                            <path class="map-land-path" d="M480,90 L500,85 L520,95 L540,88 L560,98 L580,90 L600,105 L620,100 L640,110 L660,100 L680,115 L700,110 L720,125 L730,120 L750,135 L770,130 L790,145 L810,140 L830,155 L850,150 L870,165 L890,155 L900,170 L895,190 L885,210 L875,225 L880,240 L870,255 L860,270 L850,285 L840,300 L825,315 L810,330 L800,345 L790,360 L780,380 L790,400 L805,420 L810,440 L800,450 L785,450 L770,435 L760,415 L755,395 L750,370 L740,350 L730,335 L720,320 L705,310 L690,305 L675,295 L660,290 L645,285 L630,280 L615,275 L600,270 L585,265 L570,260 L555,255 L540,250 L525,245 L510,240 L495,235 L480,230 L465,225 L450,220 Z" />
+                            <path class="map-land-path" d="M380,110 L400,100 L420,115 L440,110 L450,125 L470,120 L480,135 L490,150 L485,170 L475,190 L465,210 L455,230 L445,250 L435,270 L425,290 L415,310 L405,330 L395,350 L385,370 L375,390 L365,410 L355,430 L345,450 L335,470 L325,480 L315,480 L305,465 L295,445 L300,425 L310,405 L320,385 L330,365 L340,345 L350,325 L360,305 L370,285 L380,265 L390,245 L400,225 L410,205 L420,185 L430,165 L440,145 L430,130 L410,125 L390,120 Z" />
+                            <!-- Simple stylized polyline maps to represent world nodes -->
+                            <!-- Europe / Africa -->
+                            <path class="map-land-path" d="M480,130 L500,125 L520,135 L540,140 L550,155 L560,170 L555,190 L545,210 L535,230 L525,250 L515,270 L505,290 L495,310 L485,330 L475,350 L465,370 L455,390 L445,410 L435,430 L425,440 L415,435 L410,415 L415,390 L425,365 L435,340 L445,315 L455,290 L465,265 L475,240 L480,215 L485,190 L490,165 Z" />
+                            <!-- South America -->
+                            <path class="map-land-path" d="M260,300 L280,310 L295,330 L305,355 L315,380 L320,410 L310,440 L290,460 L275,470 L260,465 L250,445 L245,420 L240,395 L235,370 L240,345 L245,320 L255,305 Z" />
+                            <!-- Australia -->
+                            <path class="map-land-path" d="M780,360 L800,355 L820,365 L835,380 L840,400 L830,420 L810,430 L790,425 L775,410 L770,390 L775,370 Z" />
+                            
+                            <!-- Dynamic Golden Bezier Connection Lines -->
+                            <path id="route-london" class="map-connection-line" d="M 600,210 Q 540,170 480,130" />
+                            <path id="route-tokyo" class="map-connection-line" d="M 600,210 Q 720,185 840,160" />
+                            <path id="route-dubai" class="map-connection-line" d="M 600,210 Q 605,202 610,195" />
+                            <path id="route-sydney" class="map-connection-line" d="M 600,210 Q 705,302 810,395" />
+                            <path id="route-ny" class="map-connection-line" d="M 600,210 Q 405,177 210,145" />
+                            <path id="route-saopaulo" class="map-connection-line" d="M 600,210 Q 440,285 280,360" />
+                            <path id="route-capetown" class="map-connection-line" d="M 600,210 Q 540,310 480,410" />
+
+                            <!-- HQ Node (India - Manufacturing / Export Center) -->
+                            <g class="map-marker hq" data-city="Bell Matches Factory" data-info="2/180, T. Managaseri, Malli (via) Srivilliputhur, Virudunagar (Dist) Pin: 626141 Tamil Nadu, India" transform="translate(600, 210)">
+                                <circle class="marker-pulse" r="14" />
+                                <circle class="marker-core" r="6" />
+                            </g>
+
+                            <!-- Destination Nodes -->
+                            <!-- London -->
+                            <g class="map-marker destination" data-city="London" data-info="Serving elite European hotels and heritage clubs." transform="translate(480, 130)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                            <!-- New York -->
+                            <g class="map-marker destination" data-city="New York" data-info="Supplying premium cigar lounges and luxury retailers." transform="translate(210, 145)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                            <!-- Tokyo -->
+                            <g class="map-marker destination" data-city="Tokyo" data-info="Delivering Collector's Editions to specialized watch boutiques." transform="translate(840, 160)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                            <!-- Dubai -->
+                            <g class="map-marker destination" data-city="Dubai" data-info="Exclusively tailored gold-line matches for VIP hospitality suites." transform="translate(610, 195)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                            <!-- Sydney -->
+                            <g class="map-marker destination" data-city="Sydney" data-info="Partnered with premier Southern Hemisphere luxury lifestyle stores." transform="translate(810, 395)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                            <!-- Sao Paulo -->
+                            <g class="map-marker destination" data-city="Sao Paulo" data-info="Delivering premium packaging and safety-engineered wood items." transform="translate(280, 360)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                            <!-- Cape Town -->
+                            <g class="map-marker destination" data-city="Cape Town" data-info="Supplying sustainable, bio-degradable luxury matches." transform="translate(480, 410)">
+                                <circle class="marker-pulse" r="8" />
+                                <circle class="marker-core" r="4" />
+                            </g>
+                        </svg>
+                        
+                        <!-- Map Details Card -->
+                        <div class="map-tooltip" id="map-tooltip">
+                            <h4 class="tooltip-city">HQ - Export Hub</h4>
+                            <p class="tooltip-info">Igniting global luxury from our state-of-the-art facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Testimonials -->
+            <section id="testimonials" class="testimonials-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="gold-subtitle">Testimonials</span>
+                        <h2 class="section-title">Endorsed By The Elite</h2>
+                        <div class="gold-divider"></div>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card scroll-reveal-item">
+                            <span class="quote-mark">“</span>
+                            <p class="testimonial-text">
+                                In the luxury hospitality industry, every detail matters. Bell Matches provides our guests with a beautiful tactile sensation and a flawless, odorless light that sets the tone for an extraordinary stay.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4 class="author-name">Jean-Louis Moreau</h4>
+                                    <p class="author-title">Director of Guest Services, Le Grand Ciel Hotel</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card scroll-reveal-item">
+                            <span class="quote-mark">“</span>
+                            <p class="testimonial-text">
+                                For our private cigar club, we require matches that burn clean and long without affecting the flavor profiles. The Premium Gold Edition from Bell Matches is the only match we trust in our vaults.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4 class="author-name">Alexander Sterling</h4>
+                                    <p class="author-title">Founder, The Sterling Cigar Guild</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card scroll-reveal-item">
+                            <span class="quote-mark">“</span>
+                            <p class="testimonial-text">
+                                Bell Matches is not just a match manufacturer; they are curators of atmosphere. Their custom designs and premium gold-foil packaging fit perfectly alongside our bespoke luxury watches.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4 class="author-name">Marcella Vacheron</h4>
+                                    <p class="author-title">Chief Brand Officer, Vacheron Lifestyle Group</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Contact -->
+            <section id="contact" class="contact-section section-padding">
+                <div class="container">
+                    <div class="contact-grid">
+                        
+                        <!-- Contact Info Block -->
+                        <div class="contact-info-block scroll-reveal-item">
+                            <span class="gold-subtitle">Inquire</span>
+                            <h2 class="section-title">Begin A Partnership</h2>
+                            <p class="contact-lead-text">
+                                Experience the difference of premium quality matches. Contact our global corporate relationships division to curate bespoke matches for your brand, lounge, or private collection.
+                            </p>
+                            <div class="contact-details">
+                                <div class="contact-detail-item">
+                                    <span class="detail-icon">✉</span>
+                                    <div class="detail-text">
+                                        <p class="detail-label">Email Us</p>
+                                        <a href="mailto:sales@bellmatch.com" class="detail-link">sales@bellmatch.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-detail-item">
+                                    <span class="detail-icon">☎</span>
+                                    <div class="detail-text">
+                                        <p class="detail-label">Call Us Now (10am-5pm)</p>
+                                        <a href="tel:+917845965010" class="detail-link">+91 78459 65010</a>
+                                    </div>
+                                </div>
+                                <div class="contact-detail-item">
+                                    <span class="detail-icon">📍</span>
+                                    <div class="detail-text">
+                                        <p class="detail-label">Factory Address</p>
+                                        <p class="detail-val">2/180, T. Managaseri, Malli (via) Srivilliputhur, Virudunagar (Dist), Pin: 626141 India</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form Block -->
+                        <div class="contact-form-block scroll-reveal-item">
+                            <form id="inquiry-form" class="luxury-form" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <span class="form-line"></span>
+                                        <span class="error-msg">Please enter your name</span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <input type="text" id="company" name="company" class="form-input" placeholder=" ">
+                                        <label for="company" class="form-label">Company / Brand (Optional)</label>
+                                        <span class="form-line"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row split">
+                                    <div class="form-group floating-group">
+                                        <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <span class="form-line"></span>
+                                        <span class="error-msg">Please enter a valid email</span>
+                                    </div>
+                                    <div class="form-group floating-group">
+                                        <input type="tel" id="phone" name="phone" class="form-input" placeholder=" ">
+                                        <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                        <span class="form-line"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <textarea id="message" name="message" class="form-input text-area" placeholder=" " required></textarea>
+                                        <label for="message" class="form-label">Bespoke Inquiry Details</label>
+                                        <span class="form-line"></span>
+                                        <span class="error-msg">Please describe your partnership inquiry</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-action">
+                                    <button type="submit" class="btn btn-primary btn-submit btn-magnetic">
+                                        <span class="btn-text">Connect With Bell Matches</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="form-success-overlay" id="form-success">
+                                    <div class="success-message">
+                                        <span class="success-icon">✓</span>
+                                        <h3>Inquiry Received</h3>
+                                        <p>Our global relationships concierge will reach out to you within 24 business hours.</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="editorial-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">BELL MATCHES</a>
+                        <p class="footer-tagline">Igniting Traditions. Crafting Excellence.</p>
+                        <p class="footer-copy-text">© 2026 Bell Matches. All Rights Reserved. Crafted for moments of luxury.</p>
+                    </div>
+                    <div class="footer-links-grid">
+                        <div class="footer-column">
+                            <h4 class="footer-col-title">Heritage</h4>
+                            <a href="#heritage" class="footer-link">Our Story</a>
+                            <a href="#craftsmanship" class="footer-link">The Process</a>
+                            <a href="#why-us" class="footer-link">Excellence</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-col-title">Products</h4>
+                            <a href="#collection" class="footer-link">Classic Series</a>
+                            <a href="#collection" class="footer-link">Gold Edition</a>
+                            <a href="#collection" class="footer-link">Collector's Edition</a>
+                            <a href="#collection" class="footer-link">Custom Hospitality</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-col-title">Global</h4>
+                            <a href="#global-map" class="footer-link">Export Markets</a>
+                            <a href="#global-map" class="footer-link">Distribution</a>
+                            <a href="#contact" class="footer-link">Inquiry Form</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-col-title">Connect</h4>
+                            <a href="#" class="footer-link">Instagram</a>
+                            <a href="#" class="footer-link">LinkedIn</a>
+                            <a href="#" class="footer-link">Vimeo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-links">
+                        <a href="#" class="footer-small-link">Privacy Policy</a>
+                        <a href="#" class="footer-small-link">Terms of Service</a>
+                        <a href="#" class="footer-small-link">Accessibility Statement</a>
+                    </div>
+                    <div class="footer-prestige">
+                        <span>A Legacy Worth Lighting</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts (CDN) -->
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis for Smooth Inertial Scrolling -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    
+    <!-- Three.js (r128) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Main JS and Three Scene JS -->
+    <script src="three-scene.js" defer></script>
+    <script src="main.js" defer></script>
+</body>
+</html>
